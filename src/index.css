@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VayuSense Design System — Futuristic eco-AI aesthetic. All colors HSL. */
+
+@layer base {
+  :root {
+    /* Light mode — airy, clean, Apple-like */
+    --background: 180 30% 98%;
+    --foreground: 200 50% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 50% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 50% 8%;
+
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 160 90% 55%;
+
+    --secondary: 190 95% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 210 100% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 190 25% 94%;
+    --muted-foreground: 200 15% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 25% 88%;
+    --input: 200 25% 88%;
+    --ring: 160 84% 39%;
+
+    --radius: 1.25rem;
+
+    /* AQI severity */
+    --aqi-good: 142 70% 45%;
+    --aqi-moderate: 48 96% 53%;
+    --aqi-unhealthy-sensitive: 25 95% 55%;
+    --aqi-unhealthy: 0 84% 60%;
+    --aqi-very-unhealthy: 280 70% 55%;
+    --aqi-hazardous: 350 80% 35%;
+
+    /* Glass surface */
+    --glass: 0 0% 100% / 0.6;
+    --glass-border: 200 30% 80% / 0.4;
+
+    /* Gradients */
+    --gradient-eco: linear-gradient(135deg, hsl(160 84% 39%) 0%, hsl(190 95% 45%) 50%, hsl(210 100% 56%) 100%);
+    --gradient-aurora: radial-gradient(ellipse at top left, hsl(160 90% 55% / 0.25), transparent 50%),
+                       radial-gradient(ellipse at top right, hsl(210 100% 56% / 0.25), transparent 50%),
+                       radial-gradient(ellipse at bottom, hsl(190 95% 45% / 0.2), transparent 60%);
+    --gradient-glow: radial-gradient(circle, hsl(160 90% 55% / 0.4), transparent 70%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100% / 0.7), hsl(0 0% 100% / 0.4));
+
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(160 90% 55% / 0.35);
+    --shadow-soft: 0 8px 32px hsl(200 50% 20% / 0.08);
+    --shadow-elevated: 0 20px 60px -10px hsl(200 50% 20% / 0.15);
+
+    --sidebar-background: 180 30% 98%;
+    --sidebar-foreground: 200 50% 15%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 190 25% 94%;
+    --sidebar-accent-foreground: 200 50% 15%;
+    --sidebar-border: 200 25% 88%;
+    --sidebar-ring: 160 84% 39%;
+  }
+
+  .dark {
+    --background: 215 50% 5%;
+    --foreground: 180 30% 96%;
+
+    --card: 215 45% 9%;
+    --card-foreground: 180 30% 96%;
+
+    --popover: 215 45% 9%;
+    --popover-foreground: 180 30% 96%;
+
+    --primary: 160 90% 50%;
+    --primary-foreground: 215 50% 5%;
+    --primary-glow: 160 100% 65%;
+
+    --secondary: 190 95% 55%;
+    --secondary-foreground: 215 50% 5%;
+
+    --accent: 210 100% 65%;
+    --accent-foreground: 215 50% 5%;
+
+    --muted: 215 35% 14%;
+    --muted-foreground: 200 20% 65%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 35% 18%;
+    --input: 215 35% 16%;
+    --ring: 160 90% 50%;
+
+    --glass: 215 45% 12% / 0.5;
+    --glass-border: 180 50% 60% / 0.15;
+
+    --gradient-eco: linear-gradient(135deg, hsl(160 90% 50%) 0%, hsl(190 95% 55%) 50%, hsl(210 100% 65%) 100%);
+    --gradient-aurora: radial-gradient(ellipse at top left, hsl(160 90% 50% / 0.18), transparent 50%),
+                       radial-gradient(ellipse at top right, hsl(210 100% 65% / 0.18), transparent 50%),
+                       radial-gradient(ellipse at bottom, hsl(190 95% 55% / 0.15), transparent 60%);
+    --gradient-glow: radial-gradient(circle, hsl(160 100% 65% / 0.5), transparent 70%);
+    --gradient-card: linear-gradient(135deg, hsl(215 45% 14% / 0.7), hsl(215 45% 10% / 0.4));
+
+    --shadow-glow: 0 0 80px hsl(160 100% 65% / 0.4);
+    --shadow-soft: 0 8px 32px hsl(215 80% 2% / 0.5);
+    --shadow-elevated: 0 20px 60px -10px hsl(215 80% 2% / 0.7);
+
+    --sidebar-background: 215 50% 6%;
+    --sidebar-foreground: 180 30% 90%;
+    --sidebar-primary: 160 90% 50%;
+    --sidebar-primary-foreground: 215 50% 5%;
+    --sidebar-accent: 215 35% 12%;
+    --sidebar-accent-foreground: 180 30% 96%;
+    --sidebar-border: 215 35% 14%;
+    --sidebar-ring: 160 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  .glass {
+    background: hsl(var(--glass));
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid hsl(var(--glass-border));
+  }
+
+  .glass-strong {
+    background: var(--gradient-card);
+    backdrop-filter: blur(32px) saturate(180%);
+    -webkit-backdrop-filter: blur(32px) saturate(180%);
+    border: 1px solid hsl(var(--glass-border));
+  }
+
+  .text-gradient {
+    background: var(--gradient-eco);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-aurora {
+    background: var(--gradient-aurora);
+  }
+
+  .bg-eco {
+    background: var(--gradient-eco);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated), 0 0 40px hsl(var(--primary) / 0.2);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+}
+
+/* Leaflet dark theme tweaks */
+.leaflet-container {
+  background: hsl(var(--muted)) !important;
+  font-family: inherit;
+  border-radius: var(--radius);
+}
+.dark .leaflet-tile {
+  filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9) saturate(0.7);
+}
+.leaflet-control-attribution {
+  background: hsl(var(--background) / 0.8) !important;
+  color: hsl(var(--muted-foreground)) !important;
+  font-size: 10px !important;
+}
+.leaflet-control-zoom a {
+  background: hsl(var(--card)) !important;
+  color: hsl(var(--foreground)) !important;
+  border-color: hsl(var(--border)) !important;
+}
